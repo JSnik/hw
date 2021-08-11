@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ExampleService} from './services/example.service';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  constructor() {}
+  arr: number[] = [];
+  constructor(private exampleService: ExampleService) {}
 
   ngOnInit(): void {
+    this.exampleService.fillArrExceptFirstAndLAst(this.arr, 10);
   }
 }
