@@ -11,6 +11,6 @@ export class AppComponent implements OnInit{
   constructor(private exampleService: ExampleService) {}
 
   ngOnInit(): void {
-    this.exampleService.fillArrExceptFirstAndLAst(this.arr, 10);
+    this.exampleService.fillArrWithNechetniiNumbers(this.arr, 10);
   }
 }
